@@ -1,151 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hardik | DevOps Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
-        }
-        header {
-            background: #020617;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            color: #38bdf8;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #cbd5f5;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h2 {
-            color: #38bdf8;
-            border-bottom: 2px solid #1e293b;
-            padding-bottom: 10px;
-        }
-        .skills span {
-            display: inline-block;
-            background: #1e293b;
-            margin: 6px;
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        .project {
-            background: #020617;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .project h3 {
-            margin-top: 0;
-            color: #7dd3fc;
-        }
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-        footer {
-            background: #020617;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #94a3b8;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hardik | DevOps Engineer</title>
+
+<style>
+:root {
+  --bg: #020617;
+  --card: #0f172a;
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #020617, #020617 60%, #020617);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* HERO */
+header {
+  padding: 90px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #0f172a, #020617 60%);
+}
+
+header h1 {
+  font-size: 48px;
+  color: var(--accent);
+}
+
+header p {
+  margin-top: 14px;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+/* ABOUT */
+.about {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  background: var(--card);
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid #1e293b;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: var(--accent);
+  color: #020617;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #1e293b;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+}
+
+.project h3 {
+  color: #7dd3fc;
+  margin-bottom: 12px;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* CONTACT */
+.contact a {
+  display: block;
+  margin-top: 10px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+  border-top: 1px solid #1e293b;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Hardik</h1>
-    <p>DevOps Engineer | AWS | Docker | Kubernetes | CI/CD</p>
+  <h1>Hardik</h1>
+  <p>DevOps Engineer • AWS • Docker • Kubernetes • CI/CD</p>
 </header>
 
 <section>
-    <h2>About Me</h2>
-    <p>
-        I am a DevOps Engineer with 4+ years of experience in building, automating,
-        and deploying scalable applications. I work with cloud infrastructure,
-        containerization, CI/CD pipelines, and monitoring solutions.
-    </p>
+  <h2>About Me</h2>
+  <p class="about">
+    DevOps Engineer with 4+ years of experience in building, automating,
+    and deploying scalable applications. Strong hands-on experience
+    with cloud infrastructure, containers, CI/CD pipelines, and monitoring.
+  </p>
 </section>
 
 <section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>AWS (EC2, S3, IAM, VPC)</span>
-        <span>Docker</span>
-        <span>Kubernetes</span>
-        <span>Jenkins</span>
-        <span>GitHub Actions</span>
-        <span>Terraform</span>
-        <span>Ansible</span>
-        <span>Linux</span>
-        <span>Bash Scripting</span>
-        <span>Nginx</span>
-        <span>Git</span>
-    </div>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">AWS (EC2, S3, IAM, VPC)</div>
+    <div class="skill">Docker</div>
+    <div class="skill">Kubernetes</div>
+    <div class="skill">Jenkins</div>
+    <div class="skill">GitHub Actions</div>
+    <div class="skill">Terraform</div>
+    <div class="skill">Ansible</div>
+    <div class="skill">Linux</div>
+    <div class="skill">Bash</div>
+    <div class="skill">Nginx</div>
+    <div class="skill">Git</div>
+  </div>
 </section>
 
 <section>
-    <h2>Projects</h2>
+  <h2>Projects</h2>
+  <div class="projects">
 
     <div class="project">
-        <h3>CI/CD Pipeline Automation</h3>
-        <p>
-            Built a Jenkins CI/CD pipeline to automate build, test, Docker image creation,
-            and deployment to AWS EC2 on every Git push.
-        </p>
-        <p><strong>Tech:</strong> Jenkins, Docker, AWS EC2, GitHub</p>
-        <a href="https://github.com/yourusername/cicd-project" target="_blank">View on GitHub</a>
+      <h3>CI/CD Pipeline Automation</h3>
+      <p>
+        Automated build, test, Docker image creation and deployment
+        to AWS EC2 using Jenkins on every Git push.
+      </p>
+      <p><b>Tech:</b> Jenkins, Docker, AWS, GitHub</p>
+      <a href="#">View on GitHub →</a>
     </div>
 
     <div class="project">
-        <h3>Kubernetes Application Deployment</h3>
-        <p>
-            Deployed a Node.js application on Kubernetes with LoadBalancer,
-            auto-scaling (HPA), and rolling updates.
-        </p>
-        <p><strong>Tech:</strong> Kubernetes, Docker, AWS EKS</p>
-        <a href="https://github.com/yourusername/k8s-project" target="_blank">View on GitHub</a>
+      <h3>Kubernetes App Deployment</h3>
+      <p>
+        Deployed a Node.js application on Kubernetes with LoadBalancer,
+        rolling updates and autoscaling.
+      </p>
+      <p><b>Tech:</b> Kubernetes, Docker, AWS EKS</p>
+      <a href="#">View on GitHub →</a>
     </div>
 
     <div class="project">
-        <h3>Infrastructure as Code (Terraform)</h3>
-        <p>
-            Provisioned AWS infrastructure using Terraform including VPC,
-            subnets, EC2 instances, and security groups.
-        </p>
-        <p><strong>Tech:</strong> Terraform, AWS</p>
-        <a href="https://github.com/yourusername/terraform-project" target="_blank">View on GitHub</a>
+      <h3>Terraform Infrastructure</h3>
+      <p>
+        Provisioned AWS infrastructure using Terraform including VPC,
+        subnets, EC2 and security groups.
+      </p>
+      <p><b>Tech:</b> Terraform, AWS</p>
+      <a href="#">View on GitHub →</a>
     </div>
+
+  </div>
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: hardiksharmatik@gmail.com</p>
-    <p>
-        GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a><br>
-        LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
-    </p>
+<section class="contact">
+  <h2>Contact</h2>
+  <a href="mailto:hardik@example.com">hardik@example.com</a>
+  <a href="https://github.com/hardiksharma1998">GitHub</a>
+  <a href="https://linkedin.com">LinkedIn</a>
 </section>
 
 <footer>
-    © 2026 Hardik | DevOps Portfolio
+  © 2026 Hardik • DevOps Portfolio
 </footer>
 
 </body>
